@@ -35,7 +35,7 @@ function eachItemDisplay(props) {
 //-->> here the params are nothing but the ids which we get
 
 export async function getStaticPaths(context) {
-  const client = await MongoClient.connect("mongodb://0.0.0.0:27017");
+  const client = await MongoClient.connect("mongodb+srv://thirumalesh1602:thiruthi1622@cluster0.duwacwz.mongodb.net/?retryWrites=true&w=majority");
   const db = client.db();
   const myData = db.collection("meetups");
   const idInfo =  await myData.find({}, { _id: 1 }).toArray();
@@ -51,7 +51,7 @@ client.close();
 export async function getStaticProps(context) {
   const meetid = context.params.meetid;
   //.meetid , since this is the [meetid] which is the name of the folder
-  const client = await MongoClient.connect("mongodb://0.0.0.0:27017");
+  const client = await MongoClient.connect("mongodb+srv://thirumalesh1602:thiruthi1622@cluster0.duwacwz.mongodb.net/?retryWrites=true&w=majority");
   const db = client.db();
   const myData = db.collection("meetups");
   const idInfo = await myData.findOne({ _id:  new ObjectId(meetid), });
