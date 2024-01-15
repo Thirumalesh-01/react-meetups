@@ -39,7 +39,7 @@
 }
 
 /* Media query for smaller screens (adjust max-width as needed) */
-@media (max-width: 576px) {
+@media (max-width: 200px) {
   .logo {
     font-size: 1.5rem;
   }
