@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import Card from '../ui/Card';
 import classes from './NewMeetupForm.module.css';
 
+import { urlToImage } from './yourImageUtils'
 function NewMeetupForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
@@ -19,7 +20,7 @@ function NewMeetupForm(props) {
 
     const meetupData = {
       title: enteredTitle,
-      image: enteredImage,
+      image: urlToImage(enteredImage),
       address: enteredAddress,
       description: enteredDescription,
     };
