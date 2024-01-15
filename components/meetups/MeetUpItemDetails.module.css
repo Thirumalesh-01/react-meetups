@@ -1,0 +1,9 @@
+.details {
+    width: 100%;
+    text-align: center;
+    /* which tells that for the layout that has the props.children all those styles
+    we try to add the respective width here */
+}
+.details img{
+    width: 100%;
+}
