@@ -37,11 +37,11 @@ function NewMeetupForm(props) {
         </div>
         <div className={classes.control}>
           <label htmlFor='image'>Meetup Image</label>
-          <input type='text' required id='image' ref={imageInputRef} />
+          <input type='image' required id='image' ref={imageInputRef} />
         </div>
         <div className={classes.control}>
           <label htmlFor='address'>Address</label>
-          <input type='image' required id='address' ref={addressInputRef} />
+          <input type='text' required id='address' ref={addressInputRef} />
         </div>
         <div className={classes.control}>
           <label htmlFor='description'>Description</label>
